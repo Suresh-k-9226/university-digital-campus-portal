@@ -1,0 +1,43 @@
+Manifest-Version: 1.0
+Bundle-Category: University Digital Campus Portal
+Bundle-Description: Core bundle for University Digital Campus Portal
+Bundle-ManifestVersion: 2
+Bundle-Name: University Digital Campus Portal - Core
+Bundle-SymbolicName: udcp.core
+Bundle-Version: 1.0.0.SNAPSHOT
+Export-Package: com.university.udcp.core.filters;version="1.0";uses:="
+ javax.servlet",com.university.udcp.core.listeners;version="1.0";uses:
+ ="org.apache.sling.api.resource.observation",com.university.udcp.core
+ .models;version="1.0";uses:="javax.annotation,org.apache.sling.api.re
+ source,org.apache.sling.models.annotations,org.apache.sling.models.an
+ notations.injectorspecific",com.university.udcp.core.schedulers;versi
+ on="1.0",com.university.udcp.core.servlets;version="1.0";uses:="javax
+ .servlet,org.apache.sling.api,org.apache.sling.api.servlets"
+Import-Package: javax.annotation;version="0.0.0",com.day.cq.wcm.api;ve
+ rsion="[1.33,2)",com.university.udcp.core.filters;version="[1.0,2)",c
+ om.university.udcp.core.listeners;version="[1.0,2)",com.university.ud
+ cp.core.schedulers;version="[1.0,2)",com.university.udcp.core.servlet
+ s;version="[1.0,2)",java.io,java.lang,java.lang.annotation,java.lang.
+ invoke,java.util,java.util.function,javax.servlet;version="[3.1,4)",o
+ rg.apache.sling.api;version="[2.3,3)",org.apache.sling.api.request;ve
+ rsion="[2.7,3)",org.apache.sling.api.resource;version="[2.13,3)",org.
+ apache.sling.api.resource.observation;version="[1.2,2)",org.apache.sl
+ ing.api.servlets;version="[2.4,3)",org.apache.sling.models.annotation
+ s;version="[1.5,2)",org.apache.sling.models.annotations.injectorspeci
+ fic;version="[1.1,2)",org.slf4j;version="[1.7,2)"
+Provide-Capability: osgi.service;objectClass:List<String>="java.lang.R
+ unnable",osgi.service;objectClass:List<String>="javax.servlet.Filter"
+ ;uses:="javax.servlet",osgi.service;objectClass:List<String>="javax.s
+ ervlet.Servlet";uses:="javax.servlet",osgi.service;objectClass:List<S
+ tring>="org.apache.sling.api.resource.observation.ResourceChangeListe
+ ner";uses:="org.apache.sling.api.resource.observation"
+Require-Capability: osgi.extender;filter:="(&(osgi.extender=osgi.compo
+ nent)(version>=1.5.0)(!(version>=2.0.0)))",osgi.ee;filter:="(&(osgi.e
+ e=JavaSE)(version=11))"
+Service-Component: OSGI-INF/com.university.udcp.core.filters.LoggingFi
+ lter.xml,OSGI-INF/com.university.udcp.core.listeners.SimpleResourceLi
+ stener.xml,OSGI-INF/com.university.udcp.core.schedulers.SimpleSchedul
+ edTask.xml,OSGI-INF/com.university.udcp.core.servlets.SimpleServlet.x
+ ml
+Sling-Model-Classes: com.university.udcp.core.models.HelloWorldModel
+

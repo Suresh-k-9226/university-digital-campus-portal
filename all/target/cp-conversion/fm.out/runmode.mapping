@@ -1,0 +1,4 @@
+#File edited by the Apache Sling Content Package to Sling Feature converter
+#Fri Nov 13 13:31:24 IST 2026
+(default)=udcp.all.json
+author=udcp.all-author.json

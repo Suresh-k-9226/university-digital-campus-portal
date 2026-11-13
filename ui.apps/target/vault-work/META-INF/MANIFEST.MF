@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.3.6
+Build-Jdk-Spec: 21
+Implementation-Title: University Digital Campus Portal - UI apps
+Implementation-Version: 1.0-SNAPSHOT
+Content-Package-Type: application
+Content-Package-Id: com.university:udcp.ui.apps:1.0-SNAPSHOT
+Content-Package-Description: UI apps package for University Digital Camp
+ us Portal
+Content-Package-Roots: /apps/udcp/clientlibs,/apps/udcp/components,/apps
+ /udcp/i18n,/oak:index/diff.index
+

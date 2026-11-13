@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        cq:templateType="/conf/udcp/settings/wcm/template-types/page"
+        jcr:description="Editable page template for the University Digital Campus Portal, with a fixed header and footer and an author-editable responsive content area."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Campus Page"
+        status="enabled"/>
+</jcr:root>

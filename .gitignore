@@ -1,0 +1,14 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local AEM SDK and authoring data
+crx-quickstart/
+license.properties
+
+# OS-generated files
+.DS_Store
+Thumbs.db
