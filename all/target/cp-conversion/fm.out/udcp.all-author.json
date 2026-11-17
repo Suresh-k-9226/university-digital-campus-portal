@@ -31,6 +31,11 @@
       ],
       "README":"Indicate which page resource types should display the mobile emulators.",
       ":configurator:content-package-origins":"com.university:udcp.all:1.0-SNAPSHOT|com.university:udcp.ui.config:1.0-SNAPSHOT"
+    },
+    "com.university.udcp.core.services.impl.EventsConfigurationServiceImpl":    {
+      "eventsRootPath":"/content/udcp/us/en/events",
+      "maxEvents":5,
+      ":configurator:content-package-origins":"com.university:udcp.all:1.0-SNAPSHOT|com.university:udcp.ui.config:1.0-SNAPSHOT"
     }
   },
   "api-regions:JSON|false":[

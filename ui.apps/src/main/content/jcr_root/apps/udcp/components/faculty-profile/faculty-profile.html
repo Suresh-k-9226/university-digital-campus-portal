@@ -1,0 +1,64 @@
+﻿<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"></sly>
+<sly data-sly-use.facultyProfiles="com.university.udcp.core.models.FacultyProfilesModelImpl"></sly>
+
+<section class="cmp-faculty-profiles"
+         data-sly-attribute.id="${properties.id}"
+         data-sly-test="${facultyProfiles.facultyMembers.size}">
+    <header class="cmp-faculty-profiles__header">
+        <span class="cmp-faculty-profiles__eyebrow">OUR PEOPLE</span>
+        <h2 class="cmp-faculty-profiles__title">Meet Our Faculty</h2>
+        <p class="cmp-faculty-profiles__intro">
+            Learn from accomplished educators and researchers dedicated to your success.
+        </p>
+    </header>
+
+    <div class="cmp-faculty-profiles__grid"
+         data-sly-list.faculty="${facultyProfiles.facultyMembers}">
+        <article class="cmp-faculty-profile">
+            <div class="cmp-faculty-profile__profile">
+                <div class="cmp-faculty-profile__avatar" aria-hidden="true">
+                    <img src="${faculty.facultyPhoto @ context='uri'}"
+                         alt=""
+                         loading="lazy"
+                         data-sly-test="${faculty.facultyPhoto}"/>
+                    <span data-sly-test="${!faculty.facultyPhoto}">${faculty.initials}</span>
+                </div>
+
+                <div class="cmp-faculty-profile__identity">
+                    <h3 class="cmp-faculty-profile__name">${faculty.facultyName}</h3>
+                    <p class="cmp-faculty-profile__designation"
+                       data-sly-test="${faculty.designation}">${faculty.designation}</p>
+                </div>
+            </div>
+
+            <dl class="cmp-faculty-profile__details">
+                <div data-sly-test="${faculty.school}">
+                    <dt>Department</dt>
+                    <dd>${faculty.school}</dd>
+                </div>
+                <div data-sly-test="${faculty.qualification}">
+                    <dt>Qualification</dt>
+                    <dd>${faculty.qualification}</dd>
+                </div>
+                <div data-sly-test="${faculty.experience}">
+                    <dt>Experience</dt>
+                    <dd>${faculty.experience} years of experience</dd>
+                </div>
+            </dl>
+
+            <div class="cmp-faculty-profile__biography"
+                 data-sly-test="${faculty.biography}">
+                <h4>Biography</h4>
+                <p>${faculty.biography}</p>
+            </div>
+
+            <footer class="cmp-faculty-profile__footer">
+                <a href="mailto:${faculty.email @ context='uri'}"
+                   data-sly-test="${faculty.email}">${faculty.email}</a>
+                <span data-sly-test="${!faculty.email}">Email not available</span>
+            </footer>
+        </article>
+    </div>
+</section>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty=!facultyProfiles.facultyMembers.size}"></sly>

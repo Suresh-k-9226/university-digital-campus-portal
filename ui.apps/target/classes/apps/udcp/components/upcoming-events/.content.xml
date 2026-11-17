@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="cq:Component"
+    jcr:title="Upcoming Events"
+    jcr:description="Displays author-configured event cards or events from a legacy events page."
+    componentGroup="University Digital Campus Portal - Content"/>

@@ -18,26 +18,37 @@ Import-Package: javax.annotation;version="0.0.0",com.day.cq.wcm.api;ve
  om.university.udcp.core.listeners;version="[1.0,2)",com.university.ud
  cp.core.schedulers;version="[1.0,2)",com.university.udcp.core.servlet
  s;version="[1.0,2)",java.io,java.lang,java.lang.annotation,java.lang.
- invoke,java.util,java.util.function,javax.servlet;version="[3.1,4)",o
- rg.apache.sling.api;version="[2.3,3)",org.apache.sling.api.request;ve
- rsion="[2.7,3)",org.apache.sling.api.resource;version="[2.13,3)",org.
- apache.sling.api.resource.observation;version="[1.2,2)",org.apache.sl
- ing.api.servlets;version="[2.4,3)",org.apache.sling.models.annotation
- s;version="[1.5,2)",org.apache.sling.models.annotations.injectorspeci
- fic;version="[1.1,2)",org.slf4j;version="[1.7,2)"
-Provide-Capability: osgi.service;objectClass:List<String>="java.lang.R
- unnable",osgi.service;objectClass:List<String>="javax.servlet.Filter"
- ;uses:="javax.servlet",osgi.service;objectClass:List<String>="javax.s
- ervlet.Servlet";uses:="javax.servlet",osgi.service;objectClass:List<S
- tring>="org.apache.sling.api.resource.observation.ResourceChangeListe
- ner";uses:="org.apache.sling.api.resource.observation"
-Require-Capability: osgi.extender;filter:="(&(osgi.extender=osgi.compo
- nent)(version>=1.5.0)(!(version>=2.0.0)))",osgi.ee;filter:="(&(osgi.e
- e=JavaSE)(version=11))"
+ invoke,java.util,java.util.function,java.util.regex,javax.servlet;ver
+ sion="[3.1,4)",org.apache.sling.api;version="[2.3,3)",org.apache.slin
+ g.api.request;version="[2.7,3)",org.apache.sling.api.resource;version
+ ="[2.13,3)",org.apache.sling.api.resource.observation;version="[1.2,2
+ )",org.apache.sling.api.servlets;version="[2.4,3)",org.apache.sling.m
+ odels.annotations;version="[1.5,2)",org.apache.sling.models.annotatio
+ ns.injectorspecific;version="[1.1,2)",org.slf4j;version="[1.7,2)"
+Private-Package: com.university.udcp.core,com.university.udcp.core.ser
+ vices,com.university.udcp.core.services.impl
+Provide-Capability: osgi.service;objectClass:List<String>="com.univers
+ ity.udcp.core.services.EventsConfigurationService";uses:="com.univers
+ ity.udcp.core.services",osgi.service;objectClass:List<String>="java.l
+ ang.Runnable",osgi.service;objectClass:List<String>="javax.servlet.Fi
+ lter";uses:="javax.servlet",osgi.service;objectClass:List<String>="ja
+ vax.servlet.Servlet";uses:="javax.servlet",osgi.service;objectClass:L
+ ist<String>="org.apache.sling.api.resource.observation.ResourceChange
+ Listener";uses:="org.apache.sling.api.resource.observation"
+Require-Capability: osgi.service;filter:="(objectClass=org.apache.slin
+ g.api.resource.ResourceResolverFactory)";effective:=active,osgi.exten
+ der;filter:="(&(osgi.extender=osgi.component)(version>=1.5.0)(!(versi
+ on>=2.0.0)))",osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=11))"
 Service-Component: OSGI-INF/com.university.udcp.core.filters.LoggingFi
  lter.xml,OSGI-INF/com.university.udcp.core.listeners.SimpleResourceLi
  stener.xml,OSGI-INF/com.university.udcp.core.schedulers.SimpleSchedul
- edTask.xml,OSGI-INF/com.university.udcp.core.servlets.SimpleServlet.x
- ml
-Sling-Model-Classes: com.university.udcp.core.models.HelloWorldModel
+ edTask.xml,OSGI-INF/com.university.udcp.core.services.impl.EventsConf
+ igurationServiceImpl.xml,OSGI-INF/com.university.udcp.core.servlets.E
+ ventRegistrationServlet.xml,OSGI-INF/com.university.udcp.core.servlet
+ s.SimpleServlet.xml
+Sling-Model-Classes: com.university.udcp.core.models.CourseHighlightsM
+ odelImpl,com.university.udcp.core.models.CourseModelImpl,com.universi
+ ty.udcp.core.models.FacultyModelImpl,com.university.udcp.core.models.
+ FacultyProfilesModelImpl,com.university.udcp.core.models.HelloWorldMo
+ del,com.university.udcp.core.models.UpcomingEventsModelImpl
 

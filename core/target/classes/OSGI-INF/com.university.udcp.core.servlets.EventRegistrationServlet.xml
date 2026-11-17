@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.university.udcp.core.servlets.EventRegistrationServlet">
+  <property name="sling.servlet.paths" type="String">/bin/udcp/event-registration</property>
+  <property name="service.description" type="String" value="UDCP Event Registration Servlet"/>
+  <service>
+    <provide interface="javax.servlet.Servlet"/>
+  </service>
+  <reference name="resolverFactory" interface="org.apache.sling.api.resource.ResourceResolverFactory" field="resolverFactory"/>
+  <implementation class="com.university.udcp.core.servlets.EventRegistrationServlet"/>
+</scr:component>

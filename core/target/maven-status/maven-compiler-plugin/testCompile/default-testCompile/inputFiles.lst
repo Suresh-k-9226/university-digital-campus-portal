@@ -1,6 +1,10 @@
 C:\Users\suresh.kandregula\Adobe\CapstonProject\udcp\core\src\test\java\com\university\udcp\core\models\HelloWorldModelTest.java
 C:\Users\suresh.kandregula\Adobe\CapstonProject\udcp\core\src\test\java\com\university\udcp\core\testcontext\AppAemContext.java
 C:\Users\suresh.kandregula\Adobe\CapstonProject\udcp\core\src\test\java\com\university\udcp\core\listeners\SimpleResourceListenerTest.java
+C:\Users\suresh.kandregula\Adobe\CapstonProject\udcp\core\src\test\java\com\university\udcp\core\services\impl\EventsConfigurationServiceImplTest.java
+C:\Users\suresh.kandregula\Adobe\CapstonProject\udcp\core\src\test\java\com\university\udcp\core\models\FacultyProfilesModelImplTest.java
+C:\Users\suresh.kandregula\Adobe\CapstonProject\udcp\core\src\test\java\com\university\udcp\core\models\FacultyModelImplTest.java
 C:\Users\suresh.kandregula\Adobe\CapstonProject\udcp\core\src\test\java\com\university\udcp\core\servlets\SimpleServletTest.java
 C:\Users\suresh.kandregula\Adobe\CapstonProject\udcp\core\src\test\java\com\university\udcp\core\filters\LoggingFilterTest.java
+C:\Users\suresh.kandregula\Adobe\CapstonProject\udcp\core\src\test\java\com\university\udcp\core\models\UpcomingEventsModelImplTest.java
 C:\Users\suresh.kandregula\Adobe\CapstonProject\udcp\core\src\test\java\com\university\udcp\core\schedulers\SimpleScheduledTaskTest.java

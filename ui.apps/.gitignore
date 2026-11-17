@@ -1,2 +1,2 @@
-src/main/content/jcr_root/apps/udcp/clientlibs/clientlib-site
+# Keep generated clientlib dependencies out of source control
 src/main/content/jcr_root/apps/udcp/clientlibs/clientlib-dependencies

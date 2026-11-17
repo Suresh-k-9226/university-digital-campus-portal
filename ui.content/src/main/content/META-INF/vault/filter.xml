@@ -7,5 +7,6 @@
         <include pattern="/content/dam/udcp/jcr:content(/.*)?"/>
     </filter>
     <filter root="/content/dam/udcp/asset.jpg" mode="merge"/>
+    <filter root="/content/dam/udcp/campus-hero.png" mode="merge"/>
     <filter root="/content/experience-fragments/udcp" mode="merge"/>
 </workspaceFilter>

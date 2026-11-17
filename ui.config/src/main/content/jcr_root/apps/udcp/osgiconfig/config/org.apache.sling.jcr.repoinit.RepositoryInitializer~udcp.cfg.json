@@ -1,7 +1,12 @@
+
 {
-    "scripts": [
-        "create path (sling:OrderedFolder) /content/dam/udcp",
-        "create path (nt:unstructured) /content/dam/udcp/jcr:content",
-        "set properties on /content/dam/udcp/jcr:content\n  set cq:conf{String} to /conf/udcp\n  set jcr:title{String} to \"University Digital Campus Portal\"\nend"
-    ]
+  "scripts": [
+    "create path (sling:OrderedFolder) /content/dam/udcp",
+    "create path (nt:unstructured) /content/dam/udcp/jcr:content",
+    "set properties on /content/dam/udcp/jcr:content\n  set cq:conf{String} to /conf/udcp\n  set jcr:title{String} to \"University Digital Campus Portal\"\nend",
+    "create service user udcp-registration-service",
+    "create path (sling:Folder) /var/udcp",
+    "create path (sling:Folder) /var/udcp/event-registrations",
+    "set ACL for udcp-registration-service\n  allow jcr:read, jcr:addChildNodes, jcr:modifyProperties, jcr:nodeTypeManagement on /var/udcp/event-registrations\nend"
+  ]
 }

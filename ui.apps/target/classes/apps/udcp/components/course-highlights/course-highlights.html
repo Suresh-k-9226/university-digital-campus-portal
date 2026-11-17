@@ -1,0 +1,54 @@
+﻿<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"></sly>
+<sly data-sly-use.courseHighlights="com.university.udcp.core.models.CourseHighlightsModelImpl"></sly>
+
+<section class="cmp-course-highlights"
+         data-sly-test="${courseHighlights.courses}">
+    <header class="cmp-course-highlights__header">
+        <span class="cmp-course-highlights__eyebrow">ACADEMICS</span>
+        <h2 class="cmp-course-highlights__title">Explore Our Academic Programs</h2>
+        <p class="cmp-course-highlights__intro">
+            Find the right program to pursue your ambitions and build your future.
+        </p>
+    </header>
+
+    <p class="cmp-course-highlights__count">
+        Showing ${courseHighlights.courses.size} academic programs
+    </p>
+
+    <div class="cmp-course-highlights__list"
+         data-sly-list.course="${courseHighlights.courses}">
+        <article class="cmp-course-highlights__item">
+            <div class="cmp-course-highlights__top">
+                <span class="cmp-course-highlights__school"
+                      data-sly-test="${course.school}">${course.school}</span>
+                <span class="cmp-course-highlights__duration"
+                      data-sly-test="${course.duration}">${course.duration}</span>
+            </div>
+
+            <h3 class="cmp-course-highlights__name">${course.courseName}</h3>
+
+            <p class="cmp-course-highlights__fees"
+               data-sly-test="${course.fees}">
+                ₹${course.fees}
+            </p>
+
+            <div class="cmp-course-highlights__section">
+                <h4>About this program</h4>
+                <p>${course.description || 'Program information will be updated soon.'}</p>
+            </div>
+
+            <div class="cmp-course-highlights__section cmp-course-highlights__eligibility"
+                 data-sly-test="${course.eligibility}">
+                <h4>Eligibility</h4>
+                <p>${course.eligibility}</p>
+            </div>
+
+            <div class="cmp-course-highlights__footer">
+                <span>University of Velen</span>
+                <span aria-hidden="true">→</span>
+            </div>
+        </article>
+    </div>
+</section>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty=!courseHighlights.courses}"></sly>

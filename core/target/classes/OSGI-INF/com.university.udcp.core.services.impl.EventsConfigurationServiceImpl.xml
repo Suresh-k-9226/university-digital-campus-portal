@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.university.udcp.core.services.impl.EventsConfigurationServiceImpl" activate="activate">
+  <property name="eventsRootPath" type="String" value="/content/udcp/us/en/events"/>
+  <property name="maxEvents" type="Integer" value="5"/>
+  <service>
+    <provide interface="com.university.udcp.core.services.EventsConfigurationService"/>
+  </service>
+  <implementation class="com.university.udcp.core.services.impl.EventsConfigurationServiceImpl"/>
+</scr:component>

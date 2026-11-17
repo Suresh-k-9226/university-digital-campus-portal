@@ -11,5 +11,6 @@ Content-Package-Dependencies: com.university:udcp.ui.apps:1.0-SNAPSHOT
 Content-Package-Dependencies-Locations: com.university:udcp.ui.apps:1.0-
  SNAPSHOT=maven:com.university:udcp.ui.apps:1.0-SNAPSHOT:zip
 Content-Package-Roots: /conf/udcp,/content/dam/udcp,/content/dam/udcp/as
- set.jpg,/content/experience-fragments/udcp,/content/udcp
+ set.jpg,/content/dam/udcp/campus-hero.png,/content/experience-fragments
+ /udcp,/content/udcp
 

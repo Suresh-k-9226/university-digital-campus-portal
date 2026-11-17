@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:tags="[]"
+        cq:template="/conf/udcp/settings/wcm/templates/xf-web-variation"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="University of Velen Footer"
+        sling:resourceType="udcp/components/xfpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="udcp/components/container"
+            id="university-velen-footer-layout"
+            layout="simple">
+            <content
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="udcp/components/text"
+                id="contact"
+                text="&lt;div class=&quot;velen-footer__content&quot;&gt;&lt;div class=&quot;velen-footer__brand&quot;&gt;&lt;div class=&quot;velen-footer__emblem&quot; aria-hidden=&quot;true&quot;&gt;V&lt;/div&gt;&lt;div class=&quot;velen-footer__brand-name&quot;&gt;&lt;strong&gt;UNIVERSITY OF VELEN&lt;/strong&gt;&lt;p&gt;Knowledge. Innovation. Excellence.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;p class=&quot;velen-footer__mission&quot;&gt;Empowering the next generation through quality education.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;velen-footer__bottom&quot;&gt;&lt;div&gt;&#169; 2026 University of Velen. All rights reserved.&lt;/div&gt;&lt;div&gt;Powered by AEM&lt;/div&gt;&lt;/div&gt;"
+                textIsRich="true"/>
+        </root>
+    </jcr:content>
+</jcr:root>

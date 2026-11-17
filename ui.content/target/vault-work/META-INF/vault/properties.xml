@@ -5,7 +5,7 @@
 <entry key="allowIndexDefinitions">false</entry>
 <entry key="acHandling">merge</entry>
 <entry key="dependencies-locations">com.university:udcp.ui.apps:1.0-SNAPSHOT=maven:com.university:udcp.ui.apps:1.0-SNAPSHOT:zip</entry>
-<entry key="created">2026-11-13T08:01:02.691Z</entry>
+<entry key="created">2026-11-16T07:41:33.139Z</entry>
 <entry key="groupId">com.university</entry>
 <entry key="description">UI content package for University Digital Campus Portal</entry>
 <entry key="version">1.0-SNAPSHOT</entry>

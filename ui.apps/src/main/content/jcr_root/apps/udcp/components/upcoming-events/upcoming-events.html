@@ -1,0 +1,64 @@
+﻿<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"></sly>
+<sly data-sly-use.eventsModel="com.university.udcp.core.models.UpcomingEventsModelImpl"></sly>
+
+<section class="cmp-upcoming-events"
+         data-sly-attribute.id="${properties.id}"
+         data-sly-test="${eventsModel.events}">
+
+    <header class="cmp-upcoming-events__header">
+        <span class="cmp-upcoming-events__eyebrow">CAMPUS LIFE</span>
+        <h2 class="cmp-upcoming-events__title">Upcoming Events</h2>
+        <p class="cmp-upcoming-events__intro">
+            Join the conversations, celebrations and experiences happening across our university.
+        </p>
+    </header>
+
+    <div class="cmp-upcoming-events__list"
+         data-sly-list.event="${eventsModel.events}">
+        <article class="cmp-upcoming-events__item">
+            <div class="cmp-upcoming-events__art" aria-hidden="true">
+                <span>UNIVERSITY OF VELEN</span>
+            </div>
+            <div class="cmp-upcoming-events__content">
+                <div class="cmp-upcoming-events__topline">
+                    <span class="cmp-upcoming-events__category"
+                          data-sly-test="${event.category}">
+                        ${event.category}
+                    </span>
+                    <time class="cmp-upcoming-events__date"
+                          data-sly-test="${event.date}">
+                        ${event.date}
+                    </time>
+                </div>
+
+                <h3 class="cmp-upcoming-events__name">${event.title}</h3>
+
+                <dl class="cmp-upcoming-events__details">
+                    <div data-sly-test="${event.time}">
+                        <dt>Time</dt>
+                        <dd>${event.time}</dd>
+                    </div>
+                    <div data-sly-test="${event.venue}">
+                        <dt>Venue</dt>
+                        <dd>${event.venue}</dd>
+                    </div>
+                </dl>
+
+                <p class="cmp-upcoming-events__description"
+                   data-sly-test="${event.description}">
+                    ${event.description}
+                </p>
+
+                <a class="cmp-upcoming-events__registration"
+                   href="${event.registrationUrl @ context='uri'}"
+                   data-sly-test="${event.registrationUrl}">
+                    Register for event
+                    <span aria-hidden="true">→</span>
+                </a>
+            </div>
+        </article>
+    </div>
+
+</section>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty=!eventsModel.events}"></sly>

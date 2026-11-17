@@ -44,6 +44,18 @@
       ":configurator:feature-origins":[
         "com.university:udcp.all:slingosgifeature:1.0-SNAPSHOT"
       ]
+    },
+    "org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~udcp":    {
+      ":configurator:content-package-origins":"com.university:udcp.all:1.0-SNAPSHOT|com.university:udcp.ui.config:1.0-SNAPSHOT",
+      "user.mapping":[
+        "udcp.core:udcp-registration-service=[udcp-registration-service]"
+      ],
+      ":configurator:feature-origins-user.mapping":[
+        "com.university:udcp.all:slingosgifeature:1.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.university:udcp.all:slingosgifeature:1.0-SNAPSHOT"
+      ]
     }
   },
   "assembled-features:ARTIFACTS|TRANSIENT":[
@@ -73,6 +85,12 @@
     "set properties on /content/dam/udcp/jcr:content",
     "  set cq:conf{String} to /conf/udcp",
     "  set jcr:title{String} to \"University Digital Campus Portal\"",
+    "end\r",
+    "create service user udcp-registration-service\r",
+    "create path (sling:Folder) /var/udcp\r",
+    "create path (sling:Folder) /var/udcp/event-registrations\r",
+    "set ACL for udcp-registration-service",
+    "  allow jcr:read, jcr:addChildNodes, jcr:modifyProperties, jcr:nodeTypeManagement on /var/udcp/event-registrations",
     "end"
   ],
   "content-packages:ARTIFACTS|true":[

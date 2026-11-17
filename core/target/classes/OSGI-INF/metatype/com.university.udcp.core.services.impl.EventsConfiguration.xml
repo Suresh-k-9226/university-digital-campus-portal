@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.2.0" localization="OSGI-INF/l10n/com.university.udcp.core.services.impl.EventsConfiguration">
+  <OCD id="com.university.udcp.core.services.impl.EventsConfiguration" name="UDCP Upcoming Events Configuration" description="Configuration for retrieving upcoming university events.">
+    <AD id="eventsRootPath" type="String" name="Events Root Path" description="Repository path containing university event pages." default="/content/udcp/us/en/events"/>
+    <AD id="maxEvents" type="Integer" name="Maximum Events" description="Maximum number of events displayed." default="5"/>
+  </OCD>
+  <Designate pid="com.university.udcp.core.services.impl.EventsConfigurationServiceImpl">
+    <Object ocdref="com.university.udcp.core.services.impl.EventsConfiguration"/>
+  </Designate>
+</metatype:MetaData>

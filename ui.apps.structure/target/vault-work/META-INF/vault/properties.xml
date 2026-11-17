@@ -3,7 +3,7 @@
 <properties>
 <comment>University Digital Campus Portal - Repository Structure Package</comment>
 <entry key="allowIndexDefinitions">true</entry>
-<entry key="created">2026-11-13T08:00:48.699Z</entry>
+<entry key="created">2026-11-16T08:00:20.368Z</entry>
 <entry key="groupId">com.university</entry>
 <entry key="description">Empty package that defines the structure of the Adobe Experience Manager repository the Code packages in this project deploy into.
         Any roots in the Code packages of this project should have their parent enumerated in the Filters list below.</entry>

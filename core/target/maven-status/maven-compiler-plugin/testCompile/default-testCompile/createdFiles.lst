@@ -1,7 +1,10 @@
+com\university\udcp\core\models\UpcomingEventsModelImplTest.class
 com\university\udcp\core\servlets\SimpleServletTest.class
 com\university\udcp\core\filters\LoggingFilterTest.class
 com\university\udcp\core\testcontext\AppAemContext$1.class
 com\university\udcp\core\testcontext\AppAemContext.class
 com\university\udcp\core\listeners\SimpleResourceListenerTest.class
+com\university\udcp\core\models\FacultyModelImplTest.class
+com\university\udcp\core\models\FacultyProfilesModelImplTest.class
 com\university\udcp\core\schedulers\SimpleScheduledTaskTest.class
 com\university\udcp\core\models\HelloWorldModelTest.class

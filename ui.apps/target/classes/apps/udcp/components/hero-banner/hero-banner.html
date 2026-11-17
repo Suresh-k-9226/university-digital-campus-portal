@@ -1,0 +1,39 @@
+﻿<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"></sly>
+
+<section class="cmp-hero-banner"
+         data-sly-attribute.id="${properties.id}"
+         data-sly-test="${properties.headline}">
+    <div class="cmp-hero-banner__image"
+         data-sly-test="${properties.fileReference}"
+         aria-hidden="true">
+        <img src="${properties.fileReference @ context='uri'}"
+             alt=""
+             fetchpriority="high"/>
+    </div>
+
+    <div class="cmp-hero-banner__content">
+        <p class="cmp-hero-banner__eyebrow"
+           data-sly-test="${properties.eyebrow}">${properties.eyebrow}</p>
+
+        <h1 class="cmp-hero-banner__title">
+            ${properties.headline}
+            <span data-sly-test="${properties.headlineHighlight}">${properties.headlineHighlight}</span>
+        </h1>
+
+        <p class="cmp-hero-banner__description"
+           data-sly-test="${properties.description}">${properties.description}</p>
+
+        <div class="cmp-hero-banner__actions"
+             data-sly-test="${(properties.ctaText && properties.ctaLink) || (properties.secondaryCtaText && properties.secondaryCtaLink)}">
+            <a class="cmp-hero-banner__cta"
+               href="${properties.ctaLink @ context='uri'}"
+               data-sly-test="${properties.ctaText && properties.ctaLink}">${properties.ctaText}</a>
+
+            <a class="cmp-hero-banner__cta cmp-hero-banner__cta--secondary"
+               href="${properties.secondaryCtaLink @ context='uri'}"
+               data-sly-test="${properties.secondaryCtaText && properties.secondaryCtaLink}">${properties.secondaryCtaText}</a>
+        </div>
+    </div>
+</section>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty=!properties.headline}"></sly>

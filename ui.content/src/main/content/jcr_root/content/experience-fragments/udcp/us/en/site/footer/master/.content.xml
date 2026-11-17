@@ -12,6 +12,7 @@
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="udcp/components/container"
+            id="contact"
             layout="responsiveGrid">
             <separator
                 jcr:primaryType="nt:unstructured"

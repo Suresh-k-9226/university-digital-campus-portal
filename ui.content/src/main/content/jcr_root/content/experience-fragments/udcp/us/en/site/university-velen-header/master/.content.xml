@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:tags="[]"
+        cq:template="/conf/udcp/settings/wcm/templates/xf-web-variation"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="University of Velen Header"
+        sling:resourceType="udcp/components/xfpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="udcp/components/container"
+            id="university-velen-header-layout"
+            layout="simple">
+            <topbar
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="udcp/components/text"
+                id="university-velen-header-contact"
+                text="Welcome to University of Velen"/>
+            <tagline
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="udcp/components/text"
+                id="university-velen-header-tagline"
+                text="Excellence in Education Since 1985"/>
+            <brand
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="udcp/components/text"
+                id="university-velen-header-brand"
+                text="&lt;a class=&quot;velen-header__brand&quot; href=&quot;/content/udcp/us/en/campus-home.html#home&quot; aria-label=&quot;University of Velen home&quot;>&lt;span class=&quot;velen-header__emblem&quot; aria-hidden=&quot;true&quot;>V&lt;/span>&lt;span class=&quot;velen-header__name&quot;>&lt;strong>UNIVERSITY&lt;/strong>&lt;small>OF VELEN&lt;/small>&lt;/span>&lt;/a>"
+                textIsRich="true"/>
+            <navigation
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="udcp/components/text"
+                id="university-velen-header-navigation"
+                text="&lt;nav class=&quot;velen-header__nav&quot; aria-label=&quot;Primary navigation&quot;>&lt;ul class=&quot;velen-header__nav-list&quot;>&lt;li>&lt;a href=&quot;/content/udcp/us/en/campus-home.html#home&quot;>Home&lt;/a>&lt;/li>&lt;li>&lt;a href=&quot;/content/udcp/us/en/campus-home.html#programs&quot;>Programs&lt;/a>&lt;/li>&lt;li>&lt;a href=&quot;/content/udcp/us/en/campus-home.html#faculty&quot;>Faculty&lt;/a>&lt;/li>&lt;li>&lt;a href=&quot;/content/udcp/us/en/campus-home.html#events&quot;>Events&lt;/a>&lt;/li>&lt;li>&lt;a href=&quot;/content/udcp/us/en/campus-home.html#contact&quot;>Contact&lt;/a>&lt;/li>&lt;/ul>&lt;/nav>"
+                textIsRich="true"/>
+            <applyNow
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="udcp/components/button"
+                id="university-velen-header-apply"
+                link="/content/udcp/us/en/campus-home.html#admissions"
+                jcr:title="Apply Now"/>
+        </root>
+    </jcr:content>
+</jcr:root>

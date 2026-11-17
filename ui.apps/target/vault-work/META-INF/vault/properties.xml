@@ -3,7 +3,7 @@
 <properties>
 <comment>University Digital Campus Portal - UI apps</comment>
 <entry key="allowIndexDefinitions">true</entry>
-<entry key="created">2026-11-13T08:00:52.942Z</entry>
+<entry key="created">2026-11-16T08:00:30.959Z</entry>
 <entry key="groupId">com.university</entry>
 <entry key="description">UI apps package for University Digital Campus Portal</entry>
 <entry key="noIntermediateSaves">true</entry>

@@ -1,0 +1,32 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"></sly>
+
+<sly data-sly-call="${clientlib.css @ categories='udcp.headless'}"></sly>
+<sly data-sly-call="${clientlib.js @ categories='udcp.headless'}"></sly>
+
+<section class="cmp-headless-courses"
+         data-sly-attribute.id="${properties.id}"
+         data-cmp-is="headless-courses"
+         data-endpoint="${properties.endpoint @ context='uri'}">
+
+    <div class="cmp-headless-courses__header">
+        <h2 class="cmp-headless-courses__title">
+            Explore Our Academic Programs
+        </h2>
+
+        <p class="cmp-headless-courses__intro">
+            Discover the programs that prepare you for your future.
+        </p>
+    </div>
+
+    <p class="cmp-headless-courses__status"
+       data-headless-courses-status
+       role="status"
+       aria-live="polite">
+        Loading courses...
+    </p>
+
+    <div class="cmp-headless-courses__grid"
+         data-headless-courses-results>
+    </div>
+
+</section>

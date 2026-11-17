@@ -1,0 +1,6 @@
+
+{
+  "user.mapping": [
+    "udcp.core:udcp-registration-service=[udcp-registration-service]"
+  ]
+}
